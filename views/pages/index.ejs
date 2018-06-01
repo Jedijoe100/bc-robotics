@@ -1,0 +1,107 @@
+<% include ../partials/header.ejs %>
+<div id="clickBait" ><!--data-spy="affix" data-offset-top="130"-->
+  <ul class="nav nav-pills nav-justified link1" >
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="/people" class="link">The People</a></li>
+      <!--<li><a href="/robots" class="link">The Robot</a></li>-->
+      <li><a href="/club" class="link">The Club</a></li>
+    </ul>
+  </div>
+  <div id="maininfo">
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+    <div id="slideshowt">
+    
+    </div>
+    <p class="prev" >&#10094;</p>
+    <p class="next" >&#10095;</p>
+   </div>
+    <!-- Next and previous buttons -->
+    
+
+<br>
+<!--<div style="text-align:center">
+    <div id="dots"></div>
+</div>-->
+    <div class="row">
+        <div class="col-sm-8 subnotes" id="about">
+            <h2>About the club</h2><br>
+            <p>House of Science Robotics Club was founded in June 2014.  Its purpose is to provide a club for school students in Tauranga NZ, Years 7 – 13, interested in robotics and in competing in the VEX Robotics and VEX IQ competitions, on a regional, national and global level.<br>
+                We currently have four Vex IQ teams, at the intermediate level, and three Vex High school teams and growing.<br>
+                Our students currently come from Bethlehem College, Aquinas, Tauranga Boys, Otumotai College and some other schools<br>
+                We often run school holiday programmes, which provide a week-long taster of what robotics has to offer.</p>
+        </div>
+        <div class="col-sm-4 subnotes">
+            <h2>Sponsors</h2><br>
+            <ul>
+                <li><a herf="http://www.page-macrae.co.nz/about">Page Macrae Engineering</a></li>
+                <li><a herf="http://www.pubcharitylimited.org.nz/">Pub Charity</a></li>
+                <li><a herf="https://www.lionfoundation.org.nz/">Lion Foundation</a></li>
+                <li><a herf="http://taurangarotary.org.nz/">Tauranga Rotary</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div>
+
+    </div>
+</div>
+<br>
+<% include ../partials/footer.ejs %>
+<script>
+    var articleNum = 0;
+    var picNum;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this);
+        }
+    };
+    xhttp.open("GET", "/images", true);
+    xhttp.send();
+    function myFunction(xml) {
+        var xmlDoc = xml.responseXML;
+        var date = xmlDoc.getElementsByTagName("date");
+        var caption = xmlDoc.getElementsByTagName("caption");
+        var image = xmlDoc.getElementsByTagName("src");
+        var NumberArt = date.length - 1;
+        picNum = date.length;
+        for(i = 0; i < date.length; i++){
+            document.getElementById("slideshowt").innerHTML += "<div class='mySlides' id='article" + articleNum +"'><div class='numbertext'>" + articleNum + " / "+ NumberArt +"</div><img src='/images/"+ image[i].childNodes[0].nodeValue +"' class='articleimgslide'><div class='text'>" + caption[i].childNodes[0].nodeValue +"</div></div>";
+            //document.getElementById("dots").innerHTML += "<span class='dot'nclick='currentSlide("+articleNum+")'></span>";
+            articleNum += 1;
+        }
+    }
+</script>
+<script>
+    var article = 0;
+
+    $(document).ready(function(){
+        $(".mySlides").hide();
+        $("#article0").show();
+        $(".next").click(function(){
+            article += 1;
+            $(".mySlides").hide();
+            if(article <= articleNum - 1){
+                $("#article" + article).show();
+            }else{
+                article = 0;
+                $("#article" + article).show();
+            }
+            console.log(""+article);
+        });
+        $(".prev").click(function(){
+            article -= 1;
+            $(".mySlides").hide();
+            if(article >= 0){
+                $("#article" + article).show();
+            }else{
+                article = articleNum - 1;
+                $("#article" + article).show();
+            }
+            console.log(""+article);
+        });
+    });
+</script>
+</body>
+</html>
