@@ -1,3 +1,20 @@
+.intellectual {
+	background-color: #fef6f3;
+	color: #e42612;
+}
+.cultural {
+	background-color: #fffcf5;
+	color: #fbba00;
+}
+.physical {
+	background-color: #f3f9f9;
+	color: #008378;
+}
+.moral {
+	background-color: #f9f3f7;
+	color: #98005d;
+}
+
 .subnotes{
     background-color: rgba(255,255,255,0.2);
     height: 200px;
@@ -58,9 +75,6 @@
     display: none;
     text-align: center;
 }
-#article0 {
-    display: block;
-}
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -84,25 +98,9 @@
 	color: #347B98;
 	background-color: white;
 }
-.peopleWhoAreFired {
-	
-}
-.articleimgslide {
-    margin: auto;
-    max-height: 400px;
-}
-.articleimg {
-	margin: auto;
-	max-height: 270px;
-}
 .link {
 	color: #0033cc;
-	background-color: white;
 }
-.link1 {
-	background-color: white;
-}
- 
 #title {
 	padding: 17px;
 	background-color: #005596;
@@ -110,39 +108,16 @@
 	color: white;
 	font:comic-sans;
 }
-.section {
-	color: #001d29;
-	min-height: 377px;
-	padding: 10px;
-	border-color: #0099ff;
-	border-width: 1px;
-	border-radius: 5px;
-	margin: 0px;
-}
-.box {
-	margin: 10px;
-	/*padding-left: 10px;*/
-	border-style: solid;
-	border-color: #0099ff;
-	border-width: 1px;
-	min-height: 270px;
 
-	/*background-color: #F0F7D4;*/
-	border-radius: 5px;
-}
 .affix {
       top: 0;
       width: 100%;
   }
-#ads {
-	background-color: #3d4b52;
-	color: #347B98;
-}
 .affix + .container-fluid {
       padding-top: 70px;
   }
 body {
-	background-image: url("/images/background.png");
+	background-color: white;
 }
 #Cchanel {
 	background-color: #005596;
@@ -156,14 +131,4 @@ body {
 	color: orange;
 	
 }*/
-.top {
-	border-bottom: 1px solid #0099ff;
-	background-color: rgba(255, 255, 255, 0.4);
-	margin: -15px;
-}
-.navigationLinks {
-	width: 33.5%;
-	height: 30px;
-	text-align: center;
-	background-color: #347B98;
-}
+

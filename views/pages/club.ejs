@@ -1,20 +1,40 @@
 <% include ../partials/header.ejs %>
-<div id="clickBait" ><!--data-spy="affix" data-offset-top="130"-->
-    <ul class="nav nav-pills nav-justified link1" >
-        <li ><a href="/" class="link">Home</a></li>
-        <li ><a href="/people" class="link">The People</a></li>
-        <!--<li ><a href="/robots" class="link">The Robot</a></li>-->
-        <li class="active"><a href="#">The Club</a></li>
-    </ul>
-</div>
 <br>
 <div id="maininfo">
-    <p>Welcome to the club page, this page provides information about the club.<br>
-        To navigate click on the headings to find out more.</p>
-
-<% include ../partials/body.ejs %>
+	<ul class="nav nav-pills nav-justified link1" >
+        <li class="link intellectual" id="intellectual-button">Challenging the Intellectual</li>
+        <li class="link cultural" id="cultural-button">Developing the Cultural</li>
+		<li class="link physical" id="physical-button">Exercising the Physical</li>
+		<li class="link moral" id="moral-button">Shaping the Moral</li>
+    </ul>
+	<div id="intellectual" class="boxes intellectual"></div>
+	<div id="cultural" class="boxes cultural"></div>
+	<div id="physics" class="boxes physical"></div>
+	<div id="moral" class="boxes moral"></div>
 </div>
 <% include ../partials/footer.ejs %>
+<script>
+    $(document).ready(function(){
+        $(".boxes").hide();
+		$("#intellectual").show();
+        $("#intellectual-button").click(function(){
+            $(".boxes").hide();
+            $("#intelectual").show();
+        });
+        $("#cultural-button").click(function(){
+            $(".boxes").hide();
+            $("#cultural").show();
+        });
+		$("#physical-button").click(function(){
+            $(".boxes").hide();
+            $("#physical").show();
+        });
+		$("#moral-button").click(function(){
+            $(".boxes").hide();
+            $("#moral").show();
+        });
+    });
+</script>
 <script>
     var category = "Club"
     <% include ../partials/script.ejs %>
