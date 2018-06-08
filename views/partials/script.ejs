@@ -15,7 +15,7 @@ var information = xmlDoc.getElementsByTagName("text");
 
 for(i = 0; i < x.length; i++){
 if(b[i].childNodes[0].nodeValue == category || category == ""){
-document.getElementById(target[i].childNodes[0].nodeValue).innerHTML += "";
+document.getElementById(target[i].childNodes[0].nodeValue).innerHTML += "test "+ title[i].childNodes[0].nodeValue +" ";
 }
 }
 }
