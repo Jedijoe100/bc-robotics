@@ -14,6 +14,10 @@
 	background-color: #f9f3f7;
 	color: #98005d;
 }
+.link {
+	border-top-color: #005596;
+	border-top-width: 10px;
+}
 
 .subnotes{
     background-color: rgba(255,255,255,0.2);
