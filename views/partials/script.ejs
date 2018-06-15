@@ -16,7 +16,7 @@ var information = xmlDoc.getElementsByTagName("text");
 for(i = 0; i < title.length; i++){
 if(itemCat[i].childNodes[0].nodeValue == category || category == ""){
 document.getElementById(target[i].childNodes[0].nodeValue).innerHTML += "<p>" + information[i].childNodes[0].nodeValue + "</p>";
-document.getElementById(target[i].childNodes[0].nodeValue + "-button").innerHTML += "<h2>" + title[i].childNodes[0].nodeValue + "</h2>";
+document.getElementById(target[i].childNodes[0].nodeValue + "-other").innerHTML += "<h2>" + title[i].childNodes[0].nodeValue + "</h2>";
 }
 }
 }

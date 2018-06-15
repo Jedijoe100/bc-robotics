@@ -1,11 +1,14 @@
 <% include ../partials/header.ejs %>
 <br>
 <div id="maininfo">
+	<div>
+	
+	</div>
 	<ul class="nav nav-pills nav-justified link1" >
-        <li class="link intellectual" id="intellectual-button"></li>
-        <li class="link cultural" id="cultural-button"></li>
-		<li class="link physical" id="physical-button"></li>
-		<li class="link moral" id="moral-button"></li>
+        <li class="link intellectual" id="intellectual-other"></li>
+        <li class="link cultural" id="cultural-other"></li>
+		<li class="link physical" id="physical-other"></li>
+		<li class="link moral" id="moral-other"></li>
     </ul>
 	<div id="intellectual" class="boxes intellectual"></div>
 	<div id="cultural" class="boxes cultural"></div>
@@ -17,19 +20,19 @@
     $(document).ready(function(){
         $(".boxes").hide();
 		$("#intellectual").show();
-        $("#intellectual-button").click(function(){
+        $("#intellectual-other").click(function(){
             $(".boxes").hide();
             $("#intellectual").show();
         });
-        $("#cultural-button").click(function(){
+        $("#cultural-other").click(function(){
             $(".boxes").hide();
             $("#cultural").show();
         });
-		$("#physical-button").click(function(){
+		$("#physical-other").click(function(){
             $(".boxes").hide();
             $("#physical").show();
         });
-		$("#moral-button").click(function(){
+		$("#moral-other").click(function(){
             $(".boxes").hide();
             $("#moral").show();
         });
