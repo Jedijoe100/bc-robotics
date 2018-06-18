@@ -1,22 +1,23 @@
 .intellectual {
-	background-color: #fef6f3;
+	background-color: #fbdbd0;
 	color: #e42612;
 }
 .cultural {
-	background-color: #fffcf5;
+	background-color: #ffedc2;
 	color: #fbba00;
 }
 .physical {
-	background-color: #f3f9f9;
+	background-color: #d0e7db;
 	color: #008378;
 }
 .moral {
-	background-color: #f9f3f7;
+	background-color: #e7d0df;
 	color: #98005d;
 }
 .link {
 	border-top-color: #005596;
 	border-top-width: 10px;
+	border-top-style: solid;
 	cursor: pointer;
 }
 .subHead {
