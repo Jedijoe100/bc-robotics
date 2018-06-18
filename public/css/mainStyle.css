@@ -17,6 +17,7 @@
 .link {
 	border-top-color: #005596;
 	border-top-width: 10px;
+	cursor: pointer;
 }
 .subHead {
 	
