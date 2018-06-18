@@ -26,6 +26,9 @@
 .article {
 	color: #0b6eb7;
 }
+.dropdown-item {
+	
+}
 #page-top {
 	padding: 17px;
 	background-color: #005596;
@@ -34,9 +37,11 @@
 }
 #menu {
 	text-align: left;
+	width: 100px;
 }
 #menu-expand {
 	test-align: left;
+	width: 100px;
 }
 
 .subnotes{
