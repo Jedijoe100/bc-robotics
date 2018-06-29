@@ -33,10 +33,10 @@
         $(".prev").click(function(){
             article -= 1;
             $(".mySlides").hide();
-            if(article >= 0){
+            if(article1 >= 0){
                 $("#event" + article1).show();
             }else{
-                article = articleNum - 1;
+                article1 = articleNum - 1;
                 $("#event" + article1).show();
             }
             console.log(""+article1);
