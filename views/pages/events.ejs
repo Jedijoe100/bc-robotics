@@ -1,14 +1,47 @@
 <% include ../partials/header.ejs %>
 <br>
 <div id="maininfo">
-	<div id="event-slidershow">
-	  
+	 <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+	    <div id="event-slidershow">
+	    </div>
+	   <p class="prev" >&#10094;</p>
+ 	   <p class="next" >&#10095;</p>
+	  </div>
 	</div>
-</div>
 <% include ../partials/footer.ejs %>
 <script>
     var category = "Events"
     <% include ../partials/script.ejs %>
+</script>
+<script>
+    var article1 = 0;
+    $(document).ready(function(){
+        $(".mySlides").hide();
+        $("#event0").show();
+        $(".next").click(function(){
+            article1 += 1;
+            $(".mySlides").hide();
+            if(article1 <= articleNum - 1){
+                $("#event" + article1).show();
+            }else{
+                article1 = 0;
+                $("#event" + article1).show();
+            }
+            console.log(""+article1);
+        });
+        $(".prev").click(function(){
+            article -= 1;
+            $(".mySlides").hide();
+            if(article >= 0){
+                $("#event" + article1).show();
+            }else{
+                article = articleNum - 1;
+                $("#event" + article1).show();
+            }
+            console.log(""+article1);
+        });
+    });
 </script>
 </body>
 </html>
